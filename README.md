@@ -1,9 +1,14 @@
 
-Download the Java Card SDK for Linux from:
-
-    http://www.oracle.com/technetwork/java/javasebusiness/downloads/java-archive-downloads-javame-419430.html#java_card_kit-2.2.2-oth-JPR
+Download the 
+[Java Card SDK for Linux, v2.2.2](http://www.oracle.com/technetwork/java/javasebusiness/downloads/java-archive-downloads-javame-419430.html#java_card_kit-2.2.2-oth-JPR)
+from Oracle. 
 
 Place the `java_card_kit-2_2_2-linux.zip` file in this directory.
+
+Then run
+
+    vagrant up
+
 
 ### Notes
 
@@ -12,4 +17,5 @@ Place the `java_card_kit-2_2_2-linux.zip` file in this directory.
 - Javacard development presentation – http://www.slideshare.net/ssusered0e6d/con1160
 - USB smartcard reader on Vagrant VBox – http://spin.atomicobject.com/2014/03/21/smartcard-virtualbox-vm/
 - Installing GPShell – http://www.alexander-petric.com/2011/08/javacard-compiling-and-installing-an-applet.html
+
 
