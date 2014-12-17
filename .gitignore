@@ -1,0 +1,3 @@
+*.swp
+.vagrant/
+java_card_kit-*.zip
