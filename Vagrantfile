@@ -57,6 +57,14 @@ Vagrant.configure(2) do |config|
   # View the documentation for the provider you are using for more
   # information on available options.
 
+  config.vm.provider :virtualbox do |vb|
+     vb.customize ['modifyvm', :id, '--usb', 'on']
+     #vb.customize ['usbfilter', 'add', '0', '--target', :id, '--name', 'YubikeyNeo',  '--vendorid', '0x1050', '--productid', '0x0115']
+     vb.customize ['usbfilter', 'add', '0', '--target', :id, '--name', 'SCR331',      '--vendorid', '0x04e6', '--productid', '0xe001']
+     vb.customize ['usbfilter', 'add', '0', '--target', :id, '--name', 'Omnikey6121', '--vendorid', '0x076b', '--productid', '0x6622']
+     vb.customize ['usbfilter', 'add', '0', '--target', :id, '--name', 'GemaltoEzio', '--vendorid', '0x08e6', '--productid', '0x34c2']
+  end
+
   # Define a Vagrant Push strategy for pushing to Atlas. Other push strategies
   # such as FTP and Heroku are also available. See the documentation at
   # https://docs.vagrantup.com/v2/push/atlas.html for more information.
