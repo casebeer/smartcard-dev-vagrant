@@ -13,9 +13,12 @@ Vagrant.configure(2) do |config|
   # Every Vagrant development environment requires a box. You can search for
   # boxes at https://atlas.hashicorp.com/search.
   #config.vm.box = "base"
-  config.vm.box = "ubuntu/trusty64"
 
+  #config.vm.box = "ubuntu/trusty64"
   #config.vm.box_url = "http://cloud-images.ubuntu.com/vagrant/trusty/trusty-server-cloudimg-amd64-juju-vagrant-disk1.box"
+
+  config.vm.box = "ubuntu/precise64"
+  config.vm.box_url = "https://cloud-images.ubuntu.com/vagrant/precise/current/precise-server-cloudimg-amd64-vagrant-disk1.box"
 
   # Disable automatic box update checking. If you disable this, then
   # boxes will only be checked for updates when the user runs
@@ -79,7 +82,6 @@ Vagrant.configure(2) do |config|
   #   sudo apt-get install apache2
   # SHELL
   config.vm.provision "shell", path: "scripts/install.sh"
-  #config.vm.provision "file", source: "java_card_kit-2_2_2-linux.zip", destination: "downloads/java_card_kit-2_2_2-linux.zip"
   config.vm.provision "shell", path: "scripts/jcdk.sh"
 
 
